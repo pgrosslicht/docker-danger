@@ -1,5 +1,12 @@
 FROM norionomura/swiftlint:swift-4.0.3
 
+RUN apt-get update && \
+    apt-get install -y \
+      bzip2 \
+      && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 RUN git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv \
 &&  git clone git://github.com/rbenv/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
 &&  /usr/local/rbenv/plugins/ruby-build/install.sh
