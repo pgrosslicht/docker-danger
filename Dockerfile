@@ -3,6 +3,10 @@ FROM norionomura/swiftlint:swift-4.0.3
 RUN apt-get update && \
     apt-get install -y \
       bzip2 \
+      libssl-dev \
+      libreadline-dev \
+      zlib1g-dev \
+      unzip \
       && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
