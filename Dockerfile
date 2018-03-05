@@ -7,7 +7,7 @@ RUN apt-get update && \
       libreadline-dev \
       zlib1g-dev \
       unzip \
-      openssh \
+      openssh-client \
       && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
